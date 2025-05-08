@@ -8,6 +8,24 @@ model = joblib.load("modelo_viernes.pkl")
 
 st.set_page_config(page_title="Predicción de Riesgo Fiscal", layout="wide")
 
+imagen_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Seal_of_the_United_States_Internal_Revenue_Service.svg/1200px-Seal_of_the_United_States_Internal_Revenue_Service.svg.png"
+
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9)), 
+                          url("{imagen_url}");
+        background-size: 650px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 logo = Image.open("lores_IRS.jpg")
 st.image(logo, width=150)
 
@@ -121,6 +139,7 @@ if menu == "Inicio":
             """)
 
 elif menu == "Información relevante":
+
     st.title("Información Legal y Fiscal Relevante")
     st.markdown("""
     Esta herramienta ha sido desarrollada con el objetivo de ayudar a las instituciones fiscales a identificar perfiles
