@@ -1,6 +1,6 @@
-# 🧾 Herramienta de Predicción de Ingresos Anuales
+# 🧾 FISCOGUARD
 
-## 📘 Descripción del proyecto
+## 📘 Herramienta de Predicción de Ingresos Anuales
 
 Esta herramienta permite estimar si una persona tendrá un ingreso anual superior a 50.000 dólares. Está basada en un modelo de aprendizaje automático entrenado con datos reales del censo de Estados Unidos y tiene como objetivo facilitar el análisis de perfiles socioeconómicos.
 
