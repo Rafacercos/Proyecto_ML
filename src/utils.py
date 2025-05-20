@@ -15,7 +15,7 @@ def evaluar_modelo (y_test,y_pred):
     print("recallscore",recall_score(y_test,y_pred))
     print("precision score:",precision_score(y_test,y_pred))
     labels = np.unique(y_test)
-    return plt.figure(figsize=(6, 5)),sns.heatmap(confusion_matrix(y_test,y_pred), annot=True, fmt='d', cmap='Blues', xticklabels=labels, yticklabels=labels),plt.xlabel('Prediccion'),plt.ylabel('Verdaderos'),plt.title('Confusion Matrix'),plt.tight_layout()
+    return plt.figure(figsize=(6, 5)),sns.heatmap(confusion_matrix(y_test,y_pred), annot=True, fmt='d', cmap='Blues', xticklabels=labels, yticklabels=labels),plt.xlabel('Prediccion'),plt.ylabel('Verdaderos'),plt.title('Confusion Matrix'),plt.tight_layout(),plt.show()
 
 def ver_importancias (modelo):
     importancias = np.round(modelo.named_steps['class'].feature_importances_,2)
